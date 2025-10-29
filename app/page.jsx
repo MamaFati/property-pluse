@@ -1,8 +1,21 @@
+// import Link from "next/link";
+import Hero from '@/components/hero';
+import InfoBoxes from "@/components/infoBoxes";
+import HomeProperties from '@/components/HomeProperties';
+import connectDB from '@/config/database';
+
+
 const HomePage = () => {
+    connectDB();
+    // console.log(process.env.MONGODB_URL);
     return (  
-        <div className="text-2xl bg-black text-center border-2">
-            My first page!!!!!!!!!!
-        </div>
+        <>
+            <Hero />
+            <InfoBoxes />
+            <HomeProperties/>
+
+            
+        </>
     );
 }
  

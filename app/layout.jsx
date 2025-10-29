@@ -1,4 +1,8 @@
-import '@/assets/styles/globels.css';
+import Navbar from '@/components/Navbar';
+import Footer from '@/components/footer'
+import '@/assets/styles/globals.css';
+import AuthProvider from '@/components/AuthProvider';
+
 
 export const metedata = {
     title: 'Property Pluse',
@@ -8,11 +12,15 @@ export const metedata = {
 
 const MainLayout = ( { children}) => {
     return ( 
-        <html>
-            <body>
-                <main> {children} </main>
-            </body>
-        </html>
+        <AuthProvider> 
+            <html>
+                <body>
+                    <Navbar />
+                    <main> {children} </main>
+                    <Footer />
+                </body>
+            </html>
+         </AuthProvider>
      );
 }
  
