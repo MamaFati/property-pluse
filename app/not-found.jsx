@@ -1,7 +1,8 @@
+
 import Link from "next/link";
 import { FaExclamationTriangle } from "react-icons/fa";
 const NotFoundPage = () => {
-    return ( <section className="bg-blue-50 min-h-screen flex-grow">
+    return ( <section className="bg-blue-50 min-h-screen  grow">
       <div className="container m-auto max-w-2xl py-24">
         <div
           className="bg-white px-6 py-24 mb-4 shadow-md rounded-md border m-4 md:m-0"
@@ -21,7 +22,7 @@ const NotFoundPage = () => {
           </div>
         </div>
       </div>
-      <div className="flex-grow"></div>
+      <div className="grow"></div>
     </section>
  );
 }
