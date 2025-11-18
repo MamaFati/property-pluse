@@ -4,6 +4,8 @@ import '@/assets/styles/globals.css';
 import { ToastContainer } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import AuthProvider from '@/components/AuthProvider';
+import GlobalProvider from '@/context/GlobalContext';
+import 'photoswipe/dist/photoswipe.css';
 
 
 export const metedata = {
@@ -13,18 +15,20 @@ export const metedata = {
 };
 
 const MainLayout = ( { children}) => {
-    return ( 
-        <AuthProvider> 
-            <html>
-                <body>
-                    <Navbar />
-                    <main> {children} </main>
-                    <Footer />
-                    <ToastContainer/>
-                </body>
-            </html>
-         </AuthProvider>
-     );
+    return (
+      <AuthProvider>
+        <GlobalProvider>
+          <html>
+            <body>
+              <Navbar />
+              <main> {children} </main>
+              <Footer />
+              <ToastContainer />
+            </body>
+          </html>
+        </GlobalProvider>
+      </AuthProvider>
+    );
 }
  
 export default MainLayout;
