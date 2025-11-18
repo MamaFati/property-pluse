@@ -3,7 +3,7 @@ import Link from 'next/link';
 // import image from '@/public/images/properties/a1.png';
 import { FaBath, FaBed, FaRulerCombined, FaMoneyBill, FaMapMarker } from 'react-icons/fa';
 
-const propertyCard = ({property}) => {
+const PropertyCard = ({property}) => {
     const getRateDisplay = () => {
         const { rates } = property ;
         // console.log(rate)
@@ -90,4 +90,4 @@ const propertyCard = ({property}) => {
     );
 }
  
-export default propertyCard;
+export default PropertyCard;

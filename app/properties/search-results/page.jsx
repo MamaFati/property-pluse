@@ -6,7 +6,7 @@ import Link from "next/link";
 import PropertySearchForm from "@/components/PropertySearchForm";
 import { FaArrowAltCircleLeft } from "react-icons/fa";
 const SearchResultPage = async ({ searchParams }) => {
-  // await searchParams before using its properties
+   
   const { location, propertyType } = await (searchParams || {});
 
   await connectDB();
