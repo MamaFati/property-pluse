@@ -29,8 +29,6 @@ const SearchResultPage = async ({ searchParams }) => {
   const propertiesQueryResults = await Property.find(query).lean();
   const properties = convertToSerializableObject(propertiesQueryResults);
 
-  console.log(properties);
-
   return (
     <>
       <section className="bg-blue-700 py-4">
